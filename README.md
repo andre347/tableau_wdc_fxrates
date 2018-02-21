@@ -4,7 +4,7 @@ Created by [Andre de Vries](https://www.twitter.com/andre347_) (21 Feb 2018)
 
 ####  **Web Data Connector to download Foreign Exchange Rate data for over 30 currencies**
 
-Web Data Connector. Connecting to the [Fixer IO API](http://fixer.io/). Fetches the latest currency conversion data. Useful for using cross-db joins or blending in Tableau.
+Web Data Connector. Connecting to the [Fixer IO API](http://fixer.io/). Fetches the latest currency conversion data. Useful for pricing data sets that can be enriched by exchange rate data. Easy to use with cross-db joins or blending in Tableau.
 
 ----------------
 
