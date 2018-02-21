@@ -17,4 +17,4 @@ https://andre347.github.io/tableau_wdc_fxrates/
 4. Specify a base currency
 5. Click on 'Get Foreign Exchange Rates'
 
-![FX Rate](https://image.ibb.co/jP093H/fxrate.gif")
+![FX Rate](https://image.ibb.co/jP093H/fxrate.gif)
