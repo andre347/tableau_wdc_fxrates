@@ -41,8 +41,10 @@
     myConnector.getData = function (table, doneCallback) {
 
         // get the base currency selected
-        var urlParam = tableau.connectionData;
-        var baseUrl = 'https://api.fixer.io/latest?base=' + urlParam;
+        //var urlParam = tableau.connectionData.baseCurr;
+        var accessKey = tableau.connectionData.key;
+        var baseUrl = 'http://data.fixer.io/api/latest?access_key=' + accessKey;
+       // var baseUrl = 'https://api.fixer.io/latest?base=' + urlParam;
 
         tableau.log(baseUrl);
 
@@ -55,7 +57,7 @@
                     tableData.push({
                         'Currency': key,
                         'Value': rateData[key],
-                        'BaseCurrency': urlParam,
+                        'BaseCurrency': 'EUR',
                         'Date': date 
                     });
                 }
@@ -72,19 +74,22 @@ $(document).ready(function () {
     $("#clickButton").click(function () {
 
         var urlParam = {
-            baseCurr: $('#currencySelect').val().trim()
+            //baseCurr: $('#currencySelect').val().trim(),
+            key: $('#accessKey').val().trim()
         };
 
-        if (urlParam.baseCurr !== '') {
+       
+
+        if (urlParam.key !== '') {
 
             tableau.connectionName = "FIXERio-data";
-            tableau.connectionData = urlParam.baseCurr;
+            tableau.connectionData = urlParam;
             tableau.submit(); // This sends the connector object to Tableau
             //test if works on console
             tableau.log('This button is working neatly');
         } else {
-            tableau.log('Please specify a base currency!');
-            $(".errorMessage").text('Please specify a base currency');
+            tableau.log('Please enter your API key!');
+            $(".errorMessage").text('Please enter your API key');
         }
     });
 });

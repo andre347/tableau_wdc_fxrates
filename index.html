@@ -49,11 +49,15 @@
     <div>
         <div class="col-sm-6 mx-auto" style="padding-top: 0.7em;">
             <div class="card bg-light mb-3" style="max-width: 25rem;">
-                <div class="card-header">FIXER IO</div>
+                <div class="card-header">FIXER IO: Foreign exchange rates API</div>
                 <img id='logo' src="img/money.png" width="100" height="60" alt="">
                 <div class="card-body mx-auto">
-                    <p class="card-text mx-auto">Foreign exchange rates API</p>
-                    <select id="currencySelect" class="form-control">
+                    <div class="form-group">
+                    <!-- <label for="accessKey">Enter your FIXER IO API Key</label> -->
+                    <input type="text" class="form-control" id="accessKey" placeholder="API Key...">
+                    <small id="fixerLink" class="form-text text-muted">You can get a free API key <a href="https://fixer.io/" target="_blank">here</a></small>
+                    </div>
+                    <!-- <select id="currencySelect" class="form-control">
                         <option value=''>Select Base Currency..</option>
                         <option value='USD'>USD</option>
                         <option value='EUR'>EUR</option>
@@ -87,12 +91,12 @@
                         <option value='TRY'>TRY</option>
                         <option value='ZAR'>ZAR</option>
                     </select>
-                    </p>
+                    </p> -->
                     
                     <button type="button" class="btn btn-primary" id="clickButton">Get Foreign Exchange Rates</button>
                     <p><div class="errorMessage"></div></p>
                 </div>
-                
+                </div>
             </div>
         </div>
     </div>
